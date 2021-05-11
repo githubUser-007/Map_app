@@ -1,0 +1,65 @@
+.citylistholder {
+    margin-top: 30px;
+    ul{
+        padding: 0px;
+        margin: 0px;
+    }
+    li.cityballs {
+        display: inline-block;
+        width: 8%;
+        list-style-type: none;
+        margin: 4%;
+        text-align: center;
+        position: relative;
+        vertical-align: middle;
+        .icn_hldelr {
+            border: 1px solid #ccc;
+            height: 60px;
+            border-radius: 50%;
+            padding: 30px;
+            background-color:#f1f1f1;
+            color:black;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            &.active{
+                background-color:#697cd8;
+                color:#fff;
+            }
+            &:hover{
+                transform: scale(1.1);
+            }
+            span.icn_hldr {
+                display: block;
+            }
+        }
+        span.city_name {
+            font-size: 14px;
+            width: 100px;
+            display: inline-block;
+            text-align: left;
+            margin-top: 15px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    .btnactn {
+        width: 70px;
+        padding: 5px;
+        background: #3f51b5;
+        color: #fff;
+        cursor: pointer;
+        pointer-events: visible;
+        box-shadow: none;
+        outline: none;
+        &:disabled{
+            background:#ccc;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        &:focus{
+            box-shadow: none;
+            outline: none;
+        }
+    }
+}
