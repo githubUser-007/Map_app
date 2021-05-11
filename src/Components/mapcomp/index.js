@@ -2,7 +2,7 @@ import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './style.scss';
 
-const position = [42.4464, -71.4594]
+const center = [42.4464, -71.4594]
 
 export default class Mapviewcomp extends React.Component{
 
@@ -24,24 +24,13 @@ export default class Mapviewcomp extends React.Component{
         return(
             <>
             <div className="mapholder">
-            {/* <MapContainer center={center} zoom={13} scrollWheelZoom={false}>
+            <MapContainer center={center} zoom={13} scrollWheelZoom={false}>
                 <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
                 {this.handlemarker()}
-            </MapContainer> */}
-              <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-    <TileLayer
-      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
-    <Marker position={position}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker>
-  </MapContainer>,
+            </MapContainer>
             </div>
         </>
         )
